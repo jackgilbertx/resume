@@ -1,0 +1,401 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: auto;
+        max-width: 1000px;
+        padding: 60px;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      h3 {
+        font-size: 22px;
+      }
+
+      .header {
+        font-size: 14px;
+        display: flex;
+      }
+
+      .header .description {
+        padding: 6px;
+        margin-left: 24px;
+      }
+
+      .info {
+        width: 300px;
+      }
+
+      .info h3 {
+        margin: 0 0 8px 0;
+      }
+
+      .info div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+        font-weight: 500;
+      }
+
+      .info i {
+        margin-right: 5px;
+        font-size: 20px;
+      }
+
+      .section .education {
+        margin-bottom: 16px;
+      }
+
+      .section .section-head {
+        display: flex;
+        align-items: center;
+      }
+
+      .section .section-head h3 {
+        color: #2a3ffb;
+        margin-right: 10px;
+      }
+
+      .section .section-head .line {
+        height: 2px;
+        background-color: #2a3ffb;
+        flex-grow: 1;
+      }
+
+      .job {
+        margin-bottom: 32px;
+      }
+
+      .job:last-of-type {
+        margin-bottom: 0px;
+      }
+
+      .job-header {
+        margin: 4px 0 16px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .job-header i {
+        font-size: 20px;
+      }
+
+      .job-header .company {
+        text-align: center;
+      }
+
+      .job-header .year {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .job-header .year i {
+        padding: 0 2px 2px 0;
+        font-size: 16px;
+      }
+
+      .job-header .job-title {
+        font-size: 18px;
+        font-weight: 500;
+        width: 400px;
+        text-align: left;
+      }
+
+      .job .job-header .company {
+        font-weight: 500;
+      }
+
+      i {
+        color: #2a3ffb;
+      }
+
+      .job ul {
+        padding-left: 16px;
+      }
+
+      .job li {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .education-header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .education-header .major {
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      .education-header .school {
+        font-weight: 500;
+      }
+
+      .education-header .school div:nth-of-type(2) {
+        padding-top: 3px;
+      }
+
+      .education-header .year {
+        width: 200px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .education-header .school i {
+        font-size: 16px;
+        padding-top: 2px;
+      }
+
+      .education-header .year i {
+        font-size: 16px;
+        padding: 0 2px 0 0;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .skills .skill {
+        font-weight: 500;
+        color: #fff;
+        margin: 0 8px 8px 0;
+        background-color: #2a3ffb;
+        border: 1px solid #2a3ffb;
+        padding: 8px 12px;
+        border-radius: 4px;
+      }
+
+      .company {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        flex-grow: 1;
+      }
+
+      .company div:first-of-type {
+        padding-right: 4px;
+        font-size: 18px;
+      }
+
+      .company div:nth-of-type(2) {
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      .job-header .company i {
+        font-size: 16px;
+      }
+
+      .school {
+        display: flex;
+        align-items: center;
+        margin: 0;
+      }
+
+      .school div:first-of-type {
+        padding-right: 4px;
+      }
+
+      .school div:nth-of-type(2) {
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      @media only screen and (max-width: 740px) {
+        body {
+          padding: 20px;
+        }
+        .job-header {
+          flex-direction: column;
+        }
+        .job-header div {
+          justify-content: flex-start !important;
+          margin-bottom: 4px;
+        }
+
+        .education-header {
+          flex-direction: column;
+        }
+
+        .education-header div {
+          justify-content: flex-start !important;
+          margin-bottom: 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Jack Gilbert</h1>
+
+    <div class="header">
+      <div class="info">
+        <h3>Software Developer</h3>
+        <div><i class="material-icons-outlined">house</i>Minneapolis, MN</div>
+        <div>
+          <i class="material-icons-outlined">email</i>
+          jackgilbertx@gmail.com
+        </div>
+        <div>
+          <i class="material-icons-outlined">phone</i>
+          612-310-2028
+        </div>
+      </div>
+      <div class="description">
+        Front-end developer with 2+ years experience writing enterprise level
+        software with focus on React JS as well as CICD infastructure and
+        testing.
+      </div>
+    </div>
+
+    <div class="section work">
+      <div class="section-head">
+        <h3>Work Experience</h3>
+        <div class="line"></div>
+      </div>
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Software Developer</div>
+          <div class="company">
+            <div>Genesis 10</div>
+            <i class="material-icons-outlined">place</i>
+            <div>Minneapolis MN</div>
+          </div>
+          <div class="year">
+            <i class="material-icons-outlined">date_range</i>
+            <div>2019 - current</div>
+          </div>
+        </div>
+        <ul>
+          <li>
+            Worked within agile development team to build reusable platform
+            features for Cargills many product portal web applications
+          </li>
+          <li>
+            Developed docker image plugins for our Continuous
+            Integration/Continuous Delivery platform for both API and E2E
+            testing
+          </li>
+          <li>Helped build a component library for Cargill using React JS</li>
+          <li>Demo'd code to product partners every sprint</li>
+          <li>
+            Wrote support documentation and provided training to internal users
+          </li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Post Market Surveilance Analyst</div>
+          <div class="company">
+            <div>Medtronic</div>
+            <i class="material-icons-outlined">place</i>
+            <div>Minneapolis MN</div>
+          </div>
+          <div class="year">
+            <i class="material-icons-outlined">date_range</i>
+            <div>2016 - 2019</div>
+          </div>
+        </div>
+        <ul>
+          <li>
+            Class 3 Medical Device knowledge (specifically implantable pulse
+            generators)
+          </li>
+          <li>Medical device complaint investigation</li>
+          <li>Trouble shooting alleged malfunctions of Medtronic products</li>
+          <li>
+            Drafting MedWatch reports and maintaining strict adherence to FDA
+            regulations
+          </li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Bartender</div>
+          <div class="company">
+            <div>Rise</div>
+            <i class="material-icons-outlined">place</i>
+            <div>Chicago IL</div>
+          </div>
+          <div class="year">
+            <i class="material-icons-outlined">date_range</i>
+            <div>2015 - 2016</div>
+          </div>
+        </div>
+        <ul>
+          <li>
+            Handling cash and credit card transactions accurately via Micros POS
+            system
+          </li>
+          <li>Beverage preparation using specific recipes and measurements</li>
+          <li>Inventory</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section education">
+      <div class="section-head">
+        <h3>Education</h3>
+        <div class="line"></div>
+      </div>
+      <div class="education-header">
+        <div class="major">BS. Biological Sciences</div>
+        <div class="school">
+          <div>Depaul University</div>
+          <i class="material-icons-outlined">place</i>
+          <div>Chicago IL</div>
+        </div>
+        <div class="year">
+          <i class="material-icons-outlined">date_range</i>
+          <div>2010 - 2014</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <h3>Skills & Technologies</h3>
+        <div class="line"></div>
+      </div>
+      <div class="skills">
+        <div style="margin-left: 0" class="skill">JavaScript</div>
+        <div class="skill">React JS</div>
+        <div class="skill">Bash</div>
+        <div class="skill">Git</div>
+        <div class="skill">Postman/Newman</div>
+        <div class="skill">Cypress</div>
+        <div class="skill">Drone CI</div>
+        <div class="skill">Yaml</div>
+        <div class="skill">Node</div>
+        <div class="skill">Express</div>
+        <div class="skill">Redux</div>
+        <div class="skill">Jest</div>
+      </div>
+    </div>
+  </body>
+</html>
